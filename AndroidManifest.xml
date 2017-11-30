@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dml.souqiu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17"
+         />
+
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+         <!-- Don't forgot InitActivity -->
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        
+        <activity
+            android:name="com.dml.souqiu.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.dml.souqiu.MainActivity"
+             android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.dml.home.HomeActivity" />
+        <activity android:name="com.dml.home.MoreActivity" />
+        <activity android:name="com.dml.channel.ChannelActivity" />
+        <activity android:name="com.dml.myInfo.Login" />
+        <activity android:name="com.dml.myInfo.InfoActivity" />
+        <activity android:name="com.dml.myInfo.SettingActivity" />
+        <activity android:name="com.dml.myInfo.Register" />
+        <activity android:name="com.dml.myInfo.Tab01" />
+        <activity android:name="com.dml.myInfo.Tab02" />
+        <activity android:name="com.dml.myInfo.Personal" />
+        <activity android:name="com.dml.myInfo.nickname" />
+        <activity android:name="com.dml.myInfo.date"
+             android:theme="@style/MyDialogStyleBottom" />
+        <activity android:name="com.dml.myInfo.sex"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity android:name="com.dml.myInfo.nickName" />
+        <activity android:name="com.dml.myInfo.SelectPicPopupWindow"
+             android:theme="@style/MyDialogStyleBottom" />
+        
+        <activity android:name="com.dml.tvPlay.TVPlayActivity" />
+        <activity 
+            android:name="com.dml.tvPlay.TvForecastActivity">
+         </activity>
+          <activity 
+            android:name="com.dml.TvMao.TvSearchActivity">
+         </activity>
+         <activity 
+            android:name="com.dml.TvMao.TVCurrent">
+         </activity>
+         <activity 
+            android:name="com.dml.TvMao.TVOrder">
+         </activity>
+         <activity 
+            android:name="com.dml.TvMao.TVProgramInfo">
+         </activity>
+         <activity 
+            android:name="com.dml.TvMao.TVSearch">
+         </activity>
+         <activity android:name="com.dml.tvPlay.video_show"
+              android:configChanges="orientation|keyboardHidden|screenSize"
+              android:theme="@style/AppTheme2"
+              android:windowSoftInputMode="adjustPan" />
+         <activity android:name="com.dml.tvPlay.video_show2"
+              android:configChanges="orientation|keyboardHidden|screenSize"
+              android:theme="@style/AppTheme2"
+              android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.dml.tvPlay.TvActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"   />
+        <activity android:name="com.dml.video.FootballActivity" />
+        <activity android:name="com.dml.video.BasketballActivity" />
+        <activity android:name="com.dml.video.TennisActivity" />
+        <activity android:name="com.dml.video.PingPongActivity" />
+        <activity android:name="com.dml.video.BadmintonActivity" />
+        <activity android:name="com.dml.video.VolleyballActivity" />
+        <activity android:name="com.dml.video.BilliardsActivity" />
+        <activity android:name="com.dml.search.SearchActivity" />
+        <activity android:name="com.dml.search.SearchResultActivity" />
+        <activity android:name="com.dml.search.SelectPicPopupWindow" android:theme="@style/MyDialogStyleBottom" />
+      
+        <service android:name="com.dml.souqiu.MyIntentService" />
+        
+        <activity android:name="com.dml.cluster.SimilarActivity"/>
+        <activity android:name="com.dml.cluster.DeJia"/>
+        <activity android:name="com.dml.cluster.FaJia"/>
+        <activity android:name="com.dml.cluster.GuoJiaDui"/>
+        <activity android:name="com.dml.cluster.OuGuan"/>
+        <activity android:name="com.dml.cluster.PianKu"/>
+        <activity android:name="com.dml.cluster.XiJia"/>
+        <activity android:name="com.dml.cluster.YiJia"/>
+        <activity android:name="com.dml.cluster.YingChao"/>
+        <activity android:name="com.dml.cluster.ZhongChao"/>
+        <activity  android:name="com.dml.cluster.LeagueActivity"/>   
+        <activity 
+            android:name="com.dml.recommend.recommendActivity"
+            android:exported="true">
+         </activity>             
+         <activity 
+            android:name="com.dml.souqiu.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:theme="@style/MyDialogStyleBottom" >
+         </activity>
+         <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+          <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent222222" />
+ 				<!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+		
+      
+    </application>
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.CAMERA" />   
+      <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />   
+      <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.GET_TASKS" />
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+      <uses-permission android:name="android.permission.WAKE_LOCK" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+      
+      
+      <!-- SDK2.1新增获取用户位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    
+    
+    
+    
+    
+    
+    
+
+</manifest>
